@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Journey | BSc IT Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end) forwards;
+        }
+        
+        .code-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .progress-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .tech-icon:hover {
+            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.8));
+            transform: scale(1.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+    <!-- Animated background particles -->
+    <div class="fixed inset-0 overflow-hidden opacity-20 z-0">
+        <div class="absolute top-0 left-0 w-2 h-2 bg-blue-400 rounded-full animate-float" style="animation-delay: 0s; top: 20%; left: 10%;"></div>
+        <div class="absolute top-0 left-0 w-3 h-3 bg-purple-400 rounded-full animate-float" style="animation-delay: 0.5s; top: 60%; left: 35%;"></div>
+        <div class="absolute top-0 left-0 w-2 h-2 bg-pink-400 rounded-full animate-float" style="animation-delay: 1s; top: 80%; left: 75%;"></div>
+        <div class="absolute top-0 left-0 w-3 h-3 bg-indigo-400 rounded-full animate-float" style="animation-delay: 1.5s; top: 40%; left: 85%;"></div>
+        <div class="absolute top-0 left-0 w-2 h-2 bg-blue-400 rounded-full animate-float" style="animation-delay: 2s; top: 15%; left: 65%;"></div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="relative z-10">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-12 md:pb-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-xl sm:text-3xl text-gray-300 mb-3 sm:mb-4">Hello, I'm <span class="font-bold text-blue-400">S.Menakan</span></h2>
+                <h1 class="text-2xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 transform transition-all duration-500">
+                    <span class="gradient-text typing-animation">Welcome to My Tech Journey</span>
+                </h1>
+                <p class="text-base sm:text-2xl text-gray-300 mb-6 sm:mb-10 opacity-0 animate-fade-in" style="animation-delay: 3.5s; animation-fill-mode: forwards;">
+                    Aspiring <span class="font-bold text-blue-400">BSc IT Student</span> | Building the foundation for a <span class="font-bold text-purple-400">bright tech future</span>
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-semibold hover:from-indigo-600 hover:to-blue-500 transition-all transform hover:scale-105">
+                        <i class="fas fa-laptop-code mr-2"></i> My Projects
+                    </button>
+                    <button class="px-6 py-3 border-2 border-blue-400 text-blue-400 rounded-full font-semibold hover:bg-blue-400 hover:bg-opacity-10 transition-all transform hover:scale-105">
+                        <i class="fas fa-graduation-cap mr-2"></i> Learning Path
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-10 md:mt-12 flex flex-col lg:flex-row items-center gap-6 md:gap-8 w-full max-w-6xl mx-auto px-2">
+                <!-- Profile Photo -->
+                <div class="w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full border-4 border-blue-400 overflow-hidden shadow-xl transform transition-all hover:scale-105">
+                    <img src="https://i.ibb.co/xqFJf3yC/Whats-App-Image-2025-01-30-at-21-50-25-231a265c.jpg" alt="S.Menakan" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Code Card -->
+                <div class="w-full max-w-xs sm:max-w-md md:max-w-xl relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-75 animate-pulse"></div>
+                <div class="relative bg-gray-800 rounded-lg p-6 shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-3 w-3 rounded-full bg-red-400 mr-2"></div>
+                        <div class="flex-shrink-0 h-3 w-3 rounded-full bg-yellow-400 mr-2"></div>
+                        <div class="flex-shrink-0 h-3 w-3 rounded-full bg-green-400 mr-2"></div>
+                    </div>
+                    <pre class="text-green-400 overflow-x-auto"><code><span class="text-blue-400">package</span> my.tech.journey;
+                        
+<span class="text-blue-400">public class</span> <span class="text-yellow-300">FirstYearITStudent</span> {
+    
+    <span class="text-blue-400">String</span>[] knownSkills = {<span class="text-yellow-300">"Java Fundamentals"</span>, <span class="text-yellow-300">"SQL Basics"</span>};
+    <span class="text-blue-400">String</span>[] futureSkills = {<span class="text-yellow-300">"Python"</span>, <span class="text-yellow-300">"HTML/CSS/JS"</span>, <span class="text-yellow-300">"..."</span>};
+    
+    <span class="text-blue-400">public static void</span> main(<span class="text-blue-400">String</span>[] args) {
+        System.out.println(<span class="text-yellow-300">"Building my path in Information Technology!"</span>);
+    }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50 backdrop-blur-lg">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">My Tech Stack</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Current Skills -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg transform transition-all duration-300 hover:shadow-xl code-card border-t-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle text-blue-400 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">Current Skills</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Java Fundamentals</span>
+                                    <span class="text-blue-300">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar bg-blue-500 h-2.5 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">SQL Basics</span>
+                                    <span class="text-blue-300">60%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar bg-blue-500 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-300">
+                            Built a strong foundation in programming concepts with Java and database management using SQL queries.
+                        </p>
+                    </div>
+                    
+                    <!-- Future Goals -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg transform transition-all duration-300 hover:shadow-xl code-card border-t-4 border-purple-500">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-lightbulb text-purple-400 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">Future Goals</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python Programming</span>
+                                    <span class="text-purple-300">Coming Soon!</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar bg-purple-500 h-2.5 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Web Development</span>
+                                    <span class="text-purple-300">Coming Soon!</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar bg-purple-500 h-2.5 rounded-full" style="width: 5%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-300">
+                            Planning to dive into Python for data science and automation, and master web development with HTML, CSS, JavaScript.
+                        </p>
+                    </div>
+                    
+                    <!-- Learning Path -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg transform transition-all duration-300 hover:shadow-xl code-card border-t-4 border-pink-500">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-road text-pink-400 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">Learning Path</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-pink-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>1st Semester - Core Programming</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-pink-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>2nd Semester - Databases</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </div>
+                                <span class="font-medium">Next - Web Technologies</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-lock text-xs"></i>
+                                </div>
+                                <span>Advanced Concepts</span>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-300">
+                            Following a structured curriculum while exploring new technologies to expand my skillset.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Showcase -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">Technologies I'm Exploring</h2>
+                
+                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fab fa-java text-6xl text-red-500 mb-3"></i>
+                        <span class="text-lg">Java</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fas fa-database text-6xl text-blue-400 mb-3"></i>
+                        <span class="text-lg">SQL</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fab fa-python text-6xl text-yellow-400 mb-3"></i>
+                        <span class="text-lg">Python</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fab fa-html5 text-6xl text-orange-500 mb-3"></i>
+                        <span class="text-lg">HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fab fa-css3-alt text-6xl text-blue-500 mb-3"></i>
+                        <span class="text-lg">CSS3</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon transition-all duration-300">
+                        <i class="fab fa-js text-6xl text-yellow-300 mb-3"></i>
+                        <span class="text-lg">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Motivation Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900">
+            <div class="max-w-4xl mx-auto text-center">
+                <i class="fas fa-quote-left text-4xl text-blue-400 opacity-50 mb-6"></i>
+                <h3 class="text-2xl sm:text-3xl font-medium mb-8">
+                    <span class="gradient-text">Every expert was once a beginner.</span> I'm on my journey from typing "Hello World" to building innovative solutions.
+                </h3>
+                <div class="flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-user-graduate text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold">1st Year BSc IT Student</h4>
+                        <p class="text-blue-300">Building foundation for tech career</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-90">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold gradient-text">Tech Journey</h3>
+                        <p class="text-gray-400 mt-2">Building the future, one line of code at a time</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                    <p>© 2023 My Tech Journey - BSc IT First Year. All progress proudly displayed.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Animate elements when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bars
+            setTimeout(() => {
+                document.querySelectorAll('.progress-bar').forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 500);
+            
+            // Add hover effect to tech icons
+            const techIcons = document.querySelectorAll('.tech-icon');
+            techIcons.forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    this.classList.add('scale-110');
+                });
+                icon.addEventListener('mouseleave', function() {
+                    this.classList.remove('scale-110');
+                });
+            });
+            
+            // Animate card hover effect
+            const cards = document.querySelectorAll('.code-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('shadow-xl');
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('shadow-xl');
+                });
+            });
+            
+            // Display typing animation text
+            const heroText = document.querySelector('h1 span');
+            heroText.style.width = '0';
+            setTimeout(() => {
+                heroText.classList.add('typing-animation');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
